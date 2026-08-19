@@ -1,6 +1,7 @@
 // leetcode no 217
 //neetcode no 1
-class Solution {
+import java.util.HashSet;
+class containsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         HashSet<Integer> seenNumber = new HashSet<>();
          for(int i=0; i<nums.length; i++){
