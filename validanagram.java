@@ -2,7 +2,7 @@
 //neet code 2
 //array problem
 
-class Solution {
+class validanagram{
     public boolean isAnagram(String s, String t) {
         int [] ana=new int[26];
         if(s.length()!=t.length()){
