@@ -1,0 +1,25 @@
+class Solution {
+    public List<String> generateParenthesis(int n) {
+       List<String> ans=new ArrayList<>();
+       StringBuilder sc=new StringBuilder();
+       backtracking(ans,sc,0,0,n);
+       return ans; 
+    }
+    public void backtracking(List<String> ans, StringBuilder sc,int open , int close, int max){
+        if(sc.length()==max*2){
+            ans.add(sc.toString());
+            return;
+        }
+
+    
+    if(open<max){
+        sc.append('(');
+        backtracking(ans,sc,open+1,close,max);
+        sc.deleteCharAt(sc.length()-1);
+    }
+      if(close<open){
+        sc.append(')');
+        backtracking(ans,sc,open,close+1,max);
+        sc.deleteCharAt(sc.length()-1);
+    }
+}}
